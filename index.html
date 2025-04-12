@@ -25,6 +25,47 @@
 <body>
   <div>
     <h1>Benign Questions</h1>
+    <p id="randomQuestion">Loading question...</p>
   </div>
+  <script>
+    const questions = [
+      "Are you married?",
+      "Do you have kids?",
+      "When are you due?",
+      "How much do you make?",
+      "How old are you?",
+      "Are you single?",
+      "Do you live alone?",
+      "What is your ethnicity?",
+      "Are you religious?",
+      "How do you stay so thin?",
+      "Do you own a home?",
+      "Are you gay?",
+      "Are you straight?",
+      "Are you okay?",
+      "What do you do?",
+      "Are you close with your family?",
+      "Are you happy?",
+      "Do you vacation?",
+      "What church do you go to?",
+      "Do you invest?",
+      "Do you enjoy your job?",
+      "Do you like being alone?",
+      "Are you adopted?",
+      "Are you in debt?",
+      "Do you think you’ll ever get married?",
+      "Do you think you’ll ever have kids?",
+      "Are you sick?",
+      "Do you ever feel lonely?",
+      "How do you feel about your job?",
+      "Do you need to ask your wife?",
+      "Do you need to ask your husband?"
+    ];
+    function getRandomQuestion() {
+      const randomIndex = Math.floor(Math.random() * questions.length);
+      return questions[randomIndex];
+    }
+    document.getElementById("randomQuestion").textContent = getRandomQuestion();
+  </script>
 </body>
 </html>
